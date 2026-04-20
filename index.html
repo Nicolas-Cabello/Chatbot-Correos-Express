@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Correos Express</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="logo-container">
+                <img src="logo-correos-express-a.png" alt="Correos Express" class="logo">
+                <h1>Correos Express</h1>
+            </div>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>En línea</span>
+            </div>
+        </header>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>¡Hola! Soy tu asistente de Correos Express. Puedo ayudarte a saber dónde está tu paquete en un momento.</p>
+                </div>
+                <div class="message-time">Ahora</div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <input type="text" 
+                       id="messageInput" 
+                       placeholder="Escribe tu mensaje..." 
+                       maxlength="200"
+                       autocomplete="off">
+                <button id="sendButton" class="send-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="quick-actions" id="quickActions">
+                <button class="quick-action-btn" data-action="consultar_envio">¿Dónde está mi envío?</button>
+                <button class="quick-action-btn" data-action="ayuda">Ayuda</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
